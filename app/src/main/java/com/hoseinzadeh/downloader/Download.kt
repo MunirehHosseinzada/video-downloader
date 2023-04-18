@@ -1,14 +1,11 @@
 package com.hoseinzadeh.downloader
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import java.io.File
 import java.io.IOException
 
-@RequiresApi(Build.VERSION_CODES.O)
 suspend fun main() {
 
     val file = File("youtubeLinks.csv")
@@ -65,7 +62,6 @@ suspend fun main() {
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 private fun doLongRunningTask(path: FilePath): Flow<Int> {
     return flow {
 
