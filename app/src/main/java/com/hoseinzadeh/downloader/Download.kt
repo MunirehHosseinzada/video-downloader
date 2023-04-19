@@ -67,7 +67,7 @@ private fun doLongRunningTask(path: FilePath): Flow<Int> {
 
         val destination = "${path.language}/${path.grade}/${path.subject}/${path.lesson}/${path.lessonName}.mp4.tmp"
 
-        val commandParts = listOf("youtube-dl", "-o", destination, path.videoLink)
+        val commandParts = listOf("youtube-dl", "-o", destination, "--all-subs", path.videoLink)
         println(commandParts)
 
 //        val process = ProcessBuilder(commandParts)
